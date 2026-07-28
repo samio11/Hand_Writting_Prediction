@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 
-export default function DigitCanvas({ backendUrl = 'http://localhost:8000' }) {
+export default function DigitCanvas({ backendUrl = 'https://hand-writting-prediction.onrender.com' }) {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [prediction, setPrediction] = useState(null);
@@ -107,7 +107,7 @@ export default function DigitCanvas({ backendUrl = 'http://localhost:8000' }) {
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', width: '100%' }}>
-      
+
       {/* Canvas Section */}
       <div className="card" style={{ textAlign: 'center' }}>
         <div style={{ marginBottom: '16px', fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
